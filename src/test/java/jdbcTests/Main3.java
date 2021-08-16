@@ -4,6 +4,8 @@ import java.sql.*;
 
 public class Main3 {
 
+            //"select first_name,last_name,salary from employees"
+
     public static void main(String[] args) throws SQLException {
         String dbUrl = "jdbc:oracle:thin:@34.203.226.91:1521:xe";
         String dbUsername = "hr";
@@ -17,7 +19,9 @@ public class Main3 {
         ResultSet resultSet = statement.executeQuery("select first_name,last_name,salary from employees");
 
         while (resultSet.next()){
-        System.out.println(resultSet.getString(1) +" - "+ resultSet.getString(2)+" - "+resultSet.getString(3));
+        System.out.println(resultSet.getString(1) +" - "
+                + resultSet.getString(2)
+                +" - "+resultSet.getString(3));
         }
 
         //close all connections
